@@ -99,7 +99,9 @@ jobs:
         Appx_Bundle_Platforms: x86|x64
         Appx_Package_Build_Mode: StoreUpload
         Configuration: ${{ matrix.configuration }}
-
+    # add by myself
+    - name: exectue dotnet run
+      run: dotnet run
     # Remove the pfx
     - name: Remove the pfx
       run: Remove-Item -path $env:Wap_Project_Directory\GitHubActionsWorkflow.pfx
